@@ -7,7 +7,8 @@ namespace Advcalculator
     {
         static void Main(string[] args)
         {
-                int num1, num2, num3, num4, num5,  choice;
+                int num1, num2, num3, num4, num5,  choice, num6,num8;
+            /*double num7;*/
                 bool isCondition=false;
                 char op;
                 
@@ -18,7 +19,7 @@ namespace Advcalculator
             do
             {
               
-                Console.Write("Enter Operator:");
+                Console.Write("Enter Operator( +,-,*,/,%,s(square) ):");
                 op = char.Parse(Console.ReadLine());
                 
                 
@@ -50,6 +51,30 @@ namespace Advcalculator
                     num5 = int.Parse(Console.ReadLine());
                     num1 = num1 / num5;
                     
+
+                }
+                else if (op == '%')
+                {
+                    Console.Write("Enter Number:");
+                    num6 = int.Parse(Console.ReadLine());
+                    num1 = num1 % num6;
+
+
+                }
+               /* else if (op == 'r')
+                {
+                    Console.Write("Enter Number:");
+                    num7 = double.Parse(Console.ReadLine());
+                    num1+= (int)Math.Sqrt(num7);
+
+
+                }*/
+                else if (op == 's')
+                {
+                    Console.Write("Enter Number:");
+                    num8 = int.Parse(Console.ReadLine());
+                    num1 += num8*num8;
+
 
                 }
                 Console.Write("Do you want to proceed (Yes:1/No:2) :");
