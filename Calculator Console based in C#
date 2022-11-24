@@ -1,0 +1,75 @@
+using System;
+using System.Diagnostics;
+
+namespace Advcalculator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+                int num1, num2, num3, num4, num5,  choice;
+                bool isCondition=false;
+                char op;
+                
+                Console.WriteLine("Calculator"+"\n");
+                Console.Write("Enter Number:");
+                num1 = int.Parse(Console.ReadLine());
+               
+            do
+            {
+              
+                Console.Write("Enter Operator:");
+                op = char.Parse(Console.ReadLine());
+                
+                
+                if (op == '+')
+                {
+                    Console.Write("Enter Number:");
+                    num2 = int.Parse(Console.ReadLine());
+                    num1= num1+num2;
+                   
+
+                }
+                else if (op == '-')
+                {
+                    Console.Write("Enter Number:");
+                    num3 = int.Parse(Console.ReadLine());
+                    num1 = num1 - num3;
+                   
+                }
+                else if (op == '*')
+                {
+                    Console.Write("Enter Number:");
+                    num4 = int.Parse(Console.ReadLine());
+                    num1 = num1 * num4;
+                   
+                }
+                else if (op == '/')
+                {
+                    Console.Write("Enter Number:");
+                    num5 = int.Parse(Console.ReadLine());
+                    num1 = num1 / num5;
+                    
+
+                }
+                Console.Write("Do you want to proceed (Yes:1/No:2) :");
+                choice = int.Parse(Console.ReadLine());
+                if (choice == 1)
+                {
+                    isCondition = true;
+                }
+                else
+                    if (choice == 2)
+                {
+                    isCondition = false;
+                    Console.WriteLine("Result is: " + num1);
+                    /*Console.WriteLine("Your Equation is: " + num1+op+num2+op+ num3 + op + num4);*/
+                }
+ 
+            } while (isCondition);
+            
+        }
+    } 
+    
+}
+       
